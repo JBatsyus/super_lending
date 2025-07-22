@@ -1,0 +1,21 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+
+// @use 'blocks/icon';
+@use 'blocks/logo';
+@use 'blocks/header';
+@use 'blocks/mobile-menu';
+
+
+@use 'blocks/hero-section';
+// @use 'blocks/text-section';
+// @use 'blocks/steps-section';
+// @use 'blocks/scroll-section';
+// @use 'blocks/workflow-gallery';
+// @use 'blocks/contact-section';
+
+// @use 'blocks/footer';

@@ -1,0 +1,11 @@
+@use "../helpers"as *;
+
+.logo {
+
+    max-width: 66px;
+
+    @include tablet {
+        max-width: 38px;
+        height: 45px;
+    }
+}

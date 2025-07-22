@@ -1,0 +1,92 @@
+@use "../helpers"as *;
+
+/*---------HERO (START)--------*/
+
+.hero {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh - var(--header-height));
+    min-height: 900px;
+    box-sizing: border-box;
+
+    @include mobile {
+        height: max-content;
+        min-height: 100%;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        overflow: hidden;
+
+        @include laptop-s {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+
+    &__content {
+        align-content: center;
+        width: 100%;
+        max-width: 840px;
+        padding-right: 40px;
+
+        @include laptop-s {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            padding-right: 0px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text-block {
+        display: grid;
+        gap: 30px;
+
+        p {
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 0;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__image-block {
+        min-width: 600px;
+
+        @include laptop-s {
+            min-width: auto;
+        }
+
+        @include mobile {
+            aspect-ratio: 1;
+        }
+    }
+
+    &__image-wrap {
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+        overflow: hidden;
+
+        @include mobile {
+            background-position: bottom;
+        }
+    }
+}
+
+/*---------HERO (END)--------*/

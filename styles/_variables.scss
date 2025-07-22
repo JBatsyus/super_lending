@@ -1,0 +1,40 @@
+@use 'helpers'as *;
+
+:root {
+    --color-base: #000;
+    --color-white: #FFFFFF;
+    --color-light-gray: #fefefe;
+    --border: 1px solid var(--color-white);
+
+
+
+
+    --font-family-base: 'Montserrat', sans-serif;
+    --font-family-accent: 'DrukCyr', sans-serif;
+    // ширина контейнера
+    --container-width: #{rem(1800)};
+    // внутренние горизонтальные оступы - смотреть на мобильной версии
+    --container-padding-x: #{rem(16)};
+
+    --transition-duration: 0.4s;
+
+    --100vw: calc(100vw - var(--scrollbar-width));
+    --header-height: 125px;
+
+
+
+    // контейнер на лэптопе
+    @include laptop {
+        --container-width: #{rem(1280)};
+    }
+
+    @include tablet {
+        --container-padding-x: #{rem(32)};
+        --header-height: 100px;
+
+    }
+
+    @include mobile {
+        --container-padding-x: #{rem(16)};
+    }
+}

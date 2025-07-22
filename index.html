@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperMarine</title>
+    <meta name="description" content="" />
+    <!-- Favicons start-->
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./icons/favicons/apple-touch-icon-60x60.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./icons/favicons/apple-touch-icon-72x72.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./icons/favicons/apple-touch-icon-76x76.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./icons/favicons/apple-touch-icon-114x114.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./icons/favicons/apple-touch-icon-120x120.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./icons/favicons/apple-touch-icon-144x144.svg" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./icons/favicons/apple-touch-icon-152x152.svg" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-16x16.svg" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-32x32.svg" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-64x64.svg" sizes="64x64" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-96x96.svg" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-128.svg" sizes="128x128" />
+    <link rel="icon" type="image/png" href="./icons/favicons/favicon-196x196.svg" sizes="196x196" />
+    <meta name="msapplication-square70x70logo" content="./icons/favicons/mstile-70x70.svg" />
+    <meta name="msapplication-square150x150logo" content="./icons/favicons/mstile-150x150.svg" />
+    <meta name="msapplication-wide310x150logo" content="./icons/favicons/mstile-310x150.svg" />
+    <meta name="msapplication-square310x310logo" content="./icons/favicons/mstile-310x310.svg" />
+    <!-- Favicons end-->
+    <script src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./libs/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.min.css" />
+</head>
+
+<body>
+    <!--—BEGIN HEADER -->
+    <header class="header">
+        <div class="header__container container">
+        <a class="header__logo logo" href="/" title="Home" aria-label="Home">
+            <img src="./icons/logo.svg" alt="Логотип SuperMarine" class="logo__image" width="66" height="77" />
+        </a>
+        <nav class="header__menu visible-tablet" aria-label="Основное меню">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a class="header__menu-link link-hover" href="#philosophy" aria-label="Перейти к разделу 'О нас'">О
+                        нас</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link link-hover" href="#numbers"
+                        aria-label="Перейти к разделу 'Цифры'">Цифры</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link link-hover" href="#brands"
+                        aria-label="Перейти к разделу 'Наши бренды'">Наши бренды</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link link-hover" href="#advantages"
+                        aria-label="Перейти к разделу 'Наши преимущества'">Наши преимущества</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link link-hover" href="#contacts"
+                        aria-label="Перейти к разделу 'Контакты'">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-humb">
+            <div class="icon-humb">
+                <div class="icon-humb__line"></div>
+                <div class="icon-humb__line"></div>
+                <div class="icon-humb__line"></div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- MOBILE MENU (START)  -->
+    <div class="menu-mob">
+        <div class="menu-mob__inner">
+            <nav class="menu-mob__nav">
+                <ul class="menu-mob__list">
+                    <li class="menu-mob__item">
+                        <a href="#philosophy" class="menu-mob__link">
+                            О нас<span class="icon icon--arrow"> </span>
+                        </a>
+                    </li>
+                    <li class="menu-mob__item">
+                        <a href="#numbers" class="menu-mob__link">
+                            Цифры <span class="icon icon--arrow"> </span>
+                        </a>
+                    </li>
+                    <li class="menu-mob__item">
+                        <a href="#brands" class="menu-mob__link">
+                            Наши бренды<span class="icon icon--arrow"> </span>
+                        </a>
+                    </li>
+                    <li class="menu-mob__item">
+                        <a href="#advantages" class="menu-mob__link">
+                            Наши преимущества<span class="icon icon--arrow"> </span>
+                        </a>
+                    </li>
+                    <li class="menu-mob__item">
+                        <a href="#contacts" class="menu-mob__link">
+                            Контакты<span class="icon icon--arrow"> </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- MOBILE MENU (END)  -->
+    <!--—END HEADER -->
+    <main>
+        <!--—BEGIN SECTION HERO-->
+        <section class="section hero" id="philosophy">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class=" h1 hero__title">О НАС</h1>
+                    <div class="hero__text-block">
+                        <p>
+                            Компания Super Marine работает в сфере мотобизнеса c 2014 года.
+                            Большую часть времени компания успешно работала в статусе
+                            официального дилера лучших мировых брендов.
+                        </p>
+                        <p>
+                            С 2023 года Super Marine запустила новое направление бизнеса
+                            став эксклюзивным дистрибьютором в России экстравагантных
+                            китайских мотобрендов. Команда Super Marine состоит
+                            преимущественно из владельцев и фанатов разной мототехники,
+                            благодаря чему люди относятся к работе с энтузиазмом.
+                        </p>
+
+                        <p>
+                            Гибкий подход к ведению бизнеса, опора на большой опыт работы
+                            и уверенность в том, что вести бизнес нужно честно по отношению
+                            ко всем участникам – выгодная отличительная черта компании.
+                        </p>
+                    </div>
+                </div>
+                <div class="hero__image-block">
+                    <div class="hero__image-wrap" style="background-image: url('./images/hero.webp')" >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--—END SECTION HERO-->
+ </main>
+    <!--—BEGIN FOOTER -->
+    <footer class="footer" id="contacts">
+        <div class="footer__container container">
+            <div class="footer__logo-col">
+                <a href="/" class="footer__logo logo"><img src="./icons/logo.svg" alt="" class="logo__image" width="258"
+                        height="36" /></a>
+            </div>
+            <div class="footer__nav-col">
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#main" class="footer__nav-link link-hover">О нас</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#product" class="footer__nav-link link-hover">Цифры</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#philosophy" class="footer__nav-link link-hover">Наши бренды</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#finished-works" class="footer__nav-link link-hover">Наши преимущества</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#contacts" class="footer__nav-link link-hover">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts-col">
+                <a href="" class="footer__contact-link link-hover">Разработано VBI</a>
+                <a href="" class="footer__contact-link link-hover">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <!--—END  FOOTER -->
+    <script src="./libs/plugins/swiper-bundle.min.js"></script>
+    <script src="./libs/plugins/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.min.js"></script>
+</body>
+
+</html>

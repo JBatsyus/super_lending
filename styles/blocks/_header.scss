@@ -1,0 +1,39 @@
+@use "../helpers"as *;
+
+
+/*---------HEADER (START)--------*/
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    padding-block: 24px;
+    height: var(--header-height);
+
+    background-color: var(--color-base);
+    border-top: var(--border);
+    border-bottom: var(--border);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            font-family: var(--font-family-accent);
+            text-transform: uppercase;
+        }
+    }
+
+    &__menu-link {
+        font-size: 24px;
+    }
+}
+
+
+
+/*---------HEADER (END)--------*/
