@@ -774,6 +774,7 @@ a[class] {
 }
 .dealers__right {
   align-content: center;
+  aspect-ratio: 283/200;
 }
 @media (width <= 47.99875rem) {
   .dealers__right {

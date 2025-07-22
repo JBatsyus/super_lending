@@ -35,6 +35,7 @@
 
     &__right {
         align-content: center;
+        aspect-ratio: 283 / 200;
 
         @include mobile {
             aspect-ratio: 1;
