@@ -742,51 +742,51 @@ a[class] {
 }
 
 /*---------STATS (END)--------*/
-/*---------BRANDS (START)--------*/
-.brands__container {
+/*---------DEALERS (START)--------*/
+.dealers__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 @media (width <= 47.99875rem) {
-  .brands__container {
+  .dealers__container {
     grid-template-columns: 1fr;
   }
 }
-.brands__left {
+.dealers__left {
   display: grid;
   align-content: center;
   gap: 40px;
 }
-.brands__text {
+.dealers__text {
   font-weight: 300;
   font-size: 20px;
 }
 @media (width <= 47.99875rem) {
-  .brands__text {
+  .dealers__text {
     font-size: 14px;
   }
 }
-.brands__logos {
+.dealers__logos {
   display: flex;
   align-items: center;
   gap: 35px;
 }
-.brands__right {
+.dealers__right {
   align-content: center;
 }
 @media (width <= 47.99875rem) {
-  .brands__right {
+  .dealers__right {
     aspect-ratio: 1;
   }
 }
 @media (width <= 47.99875rem) {
-  .brands__right img {
+  .dealers__right img {
     height: 100%;
     object-fit: cover;
   }
 }
 
-/*---------BRANDS (END)--------*/
+/*---------DEALERS (END)--------*/
 
 /*# sourceMappingURL=main.css.map */

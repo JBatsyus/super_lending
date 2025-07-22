@@ -1,6 +1,6 @@
 @use "../helpers"as *;
-/*---------BRANDS (START)--------*/
-.brands {
+/*---------DEALERS (START)--------*/
+.dealers {
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -48,4 +48,4 @@
         }
     }
 }
-/*---------BRANDS (END)--------*/
+/*---------DEALERS (END)--------*/
