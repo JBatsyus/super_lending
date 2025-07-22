@@ -685,5 +685,62 @@ a[class] {
 }
 
 /*---------HERO (END)--------*/
+/*---------STATS (START)--------*/
+.stats-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5rem;
+}
+@media (width <= 90.06125rem) {
+  .stats-block {
+    gap: 3.75rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .stats-block {
+    gap: 2.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .stats-block {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+.stats-block__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  font-family: var(--font-family-accent);
+  color: var(--color-base);
+  font-weight: 500;
+  line-height: 0.9;
+  text-align: center;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 305px;
+}
+@media (width <= 63.99875rem) {
+  .stats-block__item {
+    width: max-content;
+  }
+}
+@media (width <= 47.99875rem) {
+  .stats-block__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.stats-block__value {
+  font-size: 64px;
+}
+.stats-block__label {
+  font-size: 32px;
+}
+
+/*---------STATS (END)--------*/
 
 /*# sourceMappingURL=main.css.map */
