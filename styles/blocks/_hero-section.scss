@@ -26,7 +26,7 @@
 
         @include mobile {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: var(--space-40);;
         }
     }
 
@@ -34,7 +34,7 @@
         align-content: center;
         width: 100%;
         max-width: 840px;
-        padding-right: 40px;
+        padding-right: var(--space-40);
 
         @include laptop-s {
             max-width: 100%;
@@ -46,7 +46,7 @@
     }
 
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: var(--space-40);
     }
 
     &__text-block {

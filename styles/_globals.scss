@@ -2,12 +2,17 @@
 
 
 body {
-    @include fluid-text(24, 14);
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-base);
     color: var(--color-white);
     background-color: var(--color-base);
+
+    @include mobile {
+        font-size: 14px;
+
+    }
 
 }
 
@@ -37,6 +42,7 @@ h1,
 .h1 {
     @include fluid-text(96, 40);
     font-weight: 500;
+    text-transform: uppercase;
 
     @include mobile {
         font-size: 40px;
@@ -45,16 +51,12 @@ h1,
 
 }
 
-h2,
-.h2 {
-    font-size: 20px;
-    line-height: 1.15;
-    font-weight: 400;
+h3,
+.h3 {
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    font-size: 48px;
 
-    @include mobile {
-        font-size: 14px;
-        line-height: 1.14;
-    }
 
 }
 

@@ -1,0 +1,123 @@
+@use "../helpers"as *;
+
+/*---------BRAND SECTION (START)--------*/
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-40);
+
+
+    &__description {
+        font-weight: 400;
+        font-size: 24px;
+        margin-left: var(--space-40);
+
+        @include mobile {
+            font-size: 14px;
+        }
+
+    }
+}
+
+.motorcycle {
+    margin-bottom: 120px;
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
+
+    &__flex {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-40);
+        flex-wrap: wrap;
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-40);
+        width: 33.333vw;
+
+        @include laptop-s {
+            width: 40vw;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        aspect-ratio: 128 / 89;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: var(--space-40);
+
+        @include mobile {
+            text-align: left;
+        }
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 16px;
+
+        @include mobile {
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+}
+
+.gallery {
+    padding-top: 120px;
+
+    @include mobile {
+        padding-top: 60px;
+    }
+
+    &__scroll-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 10px 0;
+        -webkit-overflow-scrolling-behavior: smooth;
+        scroll-behavior: smooth;
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-40);
+        padding-bottom: 10px;
+        width: max-content;
+
+    }
+
+    &__image {
+        aspect-ratio: 137 / 208;
+
+        @include mobile {
+            aspect-ratio: 1 / 1;
+            height: 328px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+
+}
+
+/*---------BRAND SECTION (END)--------*/

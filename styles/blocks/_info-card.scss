@@ -1,0 +1,21 @@
+@use "../helpers"as *;
+
+/*---------INFO (START)--------*/
+.info-card {
+    &__title {
+        margin-bottom: var(--space-40);
+
+    }
+
+    &__content {
+        font-weight: 400;
+        width: 100%;
+        max-width: 63vw;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+
+/*---------INFO (END)--------*/

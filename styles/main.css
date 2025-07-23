@@ -235,6 +235,7 @@ svg * {
   --color-white: #FFFFFF;
   --color-light-gray: #fefefe;
   --border: 1px solid var(--color-white);
+  --space-40: 40px;
   --font-family-base: "Montserrat", sans-serif;
   --font-family-accent: "DrukCyr", sans-serif;
   --container-width: 112.5rem;
@@ -318,12 +319,17 @@ body.no-scroll {
 }
 
 body {
-  font-size: clamp(0.7777777778rem, 0.6495726496rem + 0.641025641vw, 1.3333333333rem);
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-white);
   background-color: var(--color-base);
+}
+@media (width <= 47.99875rem) {
+  body {
+    font-size: 14px;
+  }
 }
 
 main {
@@ -351,6 +357,7 @@ h1,
 .h1 {
   font-size: clamp(2.2222222222rem, 1.5042735043rem + 3.5897435897vw, 5.3333333333rem);
   font-weight: 500;
+  text-transform: uppercase;
 }
 @media (width <= 47.99875rem) {
   h1,
@@ -359,18 +366,11 @@ h1,
   }
 }
 
-h2,
-.h2 {
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 400;
-}
-@media (width <= 47.99875rem) {
-  h2,
-  .h2 {
-    font-size: 14px;
-    line-height: 1.14;
-  }
+h3,
+.h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  font-size: 48px;
 }
 
 a,
@@ -535,7 +535,7 @@ a[class] {
   padding: 16px 16px 60px 16px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--space-40);
   height: 100%;
   overflow-y: auto;
 }
@@ -558,7 +558,7 @@ a[class] {
 .menu-mob__bottom {
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: var(--space-40);
 }
 .menu-mob__bottom .h2 {
   font-weight: 400;
@@ -622,14 +622,14 @@ a[class] {
 @media (width <= 47.99875rem) {
   .hero__container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: var(--space-40);
   }
 }
 .hero__content {
   align-content: center;
   width: 100%;
   max-width: 840px;
-  padding-right: 40px;
+  padding-right: var(--space-40);
 }
 @media (width <= 90.06125rem) {
   .hero__content {
@@ -642,7 +642,7 @@ a[class] {
   }
 }
 .hero__title {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-40);
 }
 .hero__text-block {
   display: grid;
@@ -718,7 +718,7 @@ a[class] {
   line-height: 0.9;
   text-align: center;
   background-color: var(--color-white);
-  padding: 40px;
+  padding: var(--space-40);
   border-radius: 8px;
   width: 100%;
   max-width: 305px;
@@ -746,7 +746,7 @@ a[class] {
 .dealers__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: var(--space-40);
 }
 @media (width <= 47.99875rem) {
   .dealers__container {
@@ -756,7 +756,7 @@ a[class] {
 .dealers__left {
   display: grid;
   align-content: center;
-  gap: 40px;
+  gap: var(--space-40);
 }
 .dealers__text {
   font-weight: 300;
@@ -795,7 +795,7 @@ a[class] {
 .brands__container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--space-40);
 }
 .brands__list {
   display: grid;
@@ -806,7 +806,7 @@ a[class] {
 @media (width <= 47.99875rem) {
   .brands__list {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: var(--space-40);
   }
 }
 .brands__item {
@@ -861,5 +861,132 @@ a[class] {
     font-size: 40px;
   }
 }
+
+/*---------BRAND SECTION (START)--------*/
+.brand-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-40);
+}
+.brand-header__description {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: var(--space-40);
+}
+@media (width <= 47.99875rem) {
+  .brand-header__description {
+    font-size: 14px;
+  }
+}
+
+.motorcycle {
+  margin-bottom: 120px;
+}
+@media (width <= 47.99875rem) {
+  .motorcycle {
+    margin-bottom: 60px;
+  }
+}
+.motorcycle__flex {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-40);
+  flex-wrap: wrap;
+}
+.motorcycle__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+  width: 33.333vw;
+}
+@media (width <= 90.06125rem) {
+  .motorcycle__card {
+    width: 40vw;
+  }
+}
+@media (width <= 47.99875rem) {
+  .motorcycle__card {
+    width: 100%;
+  }
+}
+.motorcycle__image {
+  aspect-ratio: 128/89;
+}
+.motorcycle__name {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: var(--space-40);
+}
+@media (width <= 47.99875rem) {
+  .motorcycle__name {
+    text-align: left;
+  }
+}
+.motorcycle__description {
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (width <= 47.99875rem) {
+  .motorcycle__description {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+.gallery {
+  padding-top: 120px;
+}
+@media (width <= 47.99875rem) {
+  .gallery {
+    padding-top: 60px;
+  }
+}
+.gallery__scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  -webkit-overflow-scrolling-behavior: smooth;
+  scroll-behavior: smooth;
+}
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-40);
+  padding-bottom: 10px;
+  width: max-content;
+}
+.gallery__image {
+  aspect-ratio: 137/208;
+}
+@media (width <= 47.99875rem) {
+  .gallery__image {
+    aspect-ratio: 1/1;
+    height: 328px;
+  }
+}
+.gallery__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/*---------BRAND SECTION (END)--------*/
+/*---------INFO (START)--------*/
+.info-card__title {
+  margin-bottom: var(--space-40);
+}
+.info-card__content {
+  font-weight: 400;
+  width: 100%;
+  max-width: 63vw;
+}
+@media (width <= 47.99875rem) {
+  .info-card__content {
+    max-width: 100%;
+  }
+}
+
+/*---------INFO (END)--------*/
 
 /*# sourceMappingURL=main.css.map */

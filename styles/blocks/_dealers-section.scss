@@ -5,7 +5,7 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: var(--space-40);;
 
         @include mobile {
             grid-template-columns: 1fr;
@@ -15,7 +15,7 @@
     &__left {
         display: grid;
         align-content: center;
-        gap: 40px;
+        gap: var(--space-40);;
     }
 
     &__text {

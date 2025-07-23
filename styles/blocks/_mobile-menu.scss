@@ -60,7 +60,7 @@
         padding: 16px 16px 60px 16px;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: var(--space-40);
         height: 100%;
         overflow-y: auto;
     }
@@ -87,7 +87,7 @@
     &__bottom {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        row-gap: var(--space-40);
 
         .h2 {
             font-weight: 400;

@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // new Swiper(".mySwiper", {
+    //     slidesPerView: 4,
+    //     freeMode: true,
+    //     loop: true,
+    //     scrollbar: {
+    //         el: '.swiper-scrollbar',
+    //         draggable: true,
+    //         hide: false, // Не скрывать скроллбар
+    //         snapOnRelease: true
+    //     },
+    //     breakpoints: {
+    //         320: {
+    //             slidesPerView: 1
+    //         },
+    //         768: {
+    //             slidesPerView: 2
+    //         },
+    //         1024: {
+    //             slidesPerView: 4
+    //         }
+    //     }
+    // });
+
     // Функция для удаления якоря из URL
     function removeAnchorFromUrl() {
         if (window.location.hash) {
