@@ -448,9 +448,7 @@ a[class] {
 
 /*---------HEADER (START)--------*/
 .header {
-  position: sticky;
   z-index: 100;
-  top: 0;
   padding-block: 24px;
   height: var(--header-height);
   background-color: var(--color-base);
@@ -913,6 +911,11 @@ a[class] {
 .motorcycle__image {
   aspect-ratio: 128/89;
 }
+@media (width <= 47.99875rem) {
+  .motorcycle__image img {
+    width: 100%;
+  }
+}
 .motorcycle__name {
   text-transform: uppercase;
   text-align: center;
@@ -952,6 +955,7 @@ a[class] {
 }
 .gallery__grid {
   display: grid;
+  justify-self: center;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-40);
   padding-bottom: 10px;
@@ -979,11 +983,22 @@ a[class] {
 .info-card__content {
   font-weight: 400;
   width: 100%;
-  max-width: 63vw;
+  max-width: 68vw;
 }
 @media (width <= 47.99875rem) {
   .info-card__content {
     max-width: 100%;
+  }
+}
+.info-card__background {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-bottom: 120px;
+}
+@media (width <= 47.99875rem) {
+  .info-card__background {
+    background-image: none !important;
+    margin-bottom: 60px;
   }
 }
 
