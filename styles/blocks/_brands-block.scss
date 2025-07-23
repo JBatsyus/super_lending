@@ -26,8 +26,12 @@
     &__item {
         position: relative;
         display: block;
-        text-decoration: none;
         overflow: hidden;
+        aspect-ratio: 283 / 200;
+
+        @include mobile-s {
+            aspect-ratio: 1 / 1;
+        }
 
         &::before {
             content: "";
@@ -44,10 +48,6 @@
 
         &:hover::before {
             background: rgba(0, 0, 0, 0);
-        }
-
-        @include mobile-s {
-            aspect-ratio: 1;
         }
     }
 

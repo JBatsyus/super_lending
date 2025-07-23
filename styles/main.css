@@ -812,8 +812,13 @@ a[class] {
 .brands__item {
   position: relative;
   display: block;
-  text-decoration: none;
   overflow: hidden;
+  aspect-ratio: 283/200;
+}
+@media (width <= 30.06125rem) {
+  .brands__item {
+    aspect-ratio: 1/1;
+  }
 }
 .brands__item::before {
   content: "";
@@ -828,11 +833,6 @@ a[class] {
 }
 .brands__item:hover::before {
   background: rgba(0, 0, 0, 0);
-}
-@media (width <= 30.06125rem) {
-  .brands__item {
-    aspect-ratio: 1;
-  }
 }
 .brands__image {
   width: 100%;
