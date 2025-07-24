@@ -1,18 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Lenis
-    const lenis = new Lenis({
-        syncTouch: true, // Важно для мобильных устройств
-        syncWindow: false, // Отключаем синхронизацию с нативным скроллом
-        lerp: 0.1, // Коэффициент интерполяции (0-1, меньше = плавнее)
-        duration: 1.2, // Длительность анимации скролла (в секундах)
-        orientation: 'vertical', // Направление
-        gestureOrientation: 'vertical', // Ориентация жестов
-        smoothWheel: true, // Плавный скролл колесом мыши
-        smoothTouch: false, // Плавный скролл для тач-устройств
-        autoResize: true, // Автоматическая адаптация
-    });
+    const lenis = new Lenis();
 
+    // Use requestAnimationFrame to continuously update the scroll
     function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
