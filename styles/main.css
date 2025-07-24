@@ -893,6 +893,7 @@ a[class] {
   flex-wrap: wrap;
 }
 .motorcycle__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-40);
@@ -907,6 +908,11 @@ a[class] {
   .motorcycle__card {
     width: 100%;
   }
+}
+.motorcycle__card a {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
 }
 .motorcycle__image {
   aspect-ratio: 128/89;
@@ -990,6 +996,19 @@ a[class] {
     max-width: 100%;
   }
 }
+.info-card__content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-block: 0;
+}
+.info-card__content ul > li:not(:last-child) {
+  margin-bottom: var(--space-40);
+}
+@media (width <= 47.99875rem) {
+  .info-card__content ul > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 .info-card__background {
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -1002,6 +1021,99 @@ a[class] {
   }
 }
 
+.info-section .info-card__background {
+  margin-bottom: 0;
+}
+
 /*---------INFO (END)--------*/
+/*---------CONTACTS SECTION (START)--------*/
+.contacts {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 900px;
+  box-sizing: border-box;
+}
+@media (width <= 47.99875rem) {
+  .contacts {
+    height: max-content;
+    min-height: 100%;
+  }
+}
+.contacts__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+}
+@media (width <= 90.06125rem) {
+  .contacts__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width <= 47.99875rem) {
+  .contacts__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+  }
+}
+.contacts__content {
+  align-content: center;
+  width: 100%;
+  max-width: 840px;
+  padding-right: var(--space-40);
+}
+@media (width <= 90.06125rem) {
+  .contacts__content {
+    max-width: 100%;
+  }
+}
+@media (width <= 47.99875rem) {
+  .contacts__content {
+    padding-right: 0px;
+  }
+}
+.contacts__title {
+  margin-bottom: var(--space-40);
+}
+.contacts__list {
+  display: grid;
+}
+.contacts__item {
+  font-weight: 400;
+  font-size: 40px;
+}
+@media (width <= 63.99875rem) {
+  .contacts__item {
+    font-size: 20px;
+  }
+}
+.contacts__image-block {
+  min-width: 600px;
+}
+@media (width <= 90.06125rem) {
+  .contacts__image-block {
+    min-width: auto;
+  }
+}
+@media (width <= 47.99875rem) {
+  .contacts__image-block {
+    aspect-ratio: 1;
+  }
+}
+.contacts__image-wrap {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
+}
+@media (width <= 47.99875rem) {
+  .contacts__image-wrap {
+    background-position: bottom;
+  }
+}
+
+/*---------CONTACTS SECTION (END)--------*/
 
 /*# sourceMappingURL=main.css.map */

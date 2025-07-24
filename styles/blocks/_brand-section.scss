@@ -37,6 +37,7 @@
     }
 
     &__card {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: var(--space-40);
@@ -48,6 +49,12 @@
 
         @include mobile {
             width: 100%;
+        }
+
+        a {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
         }
     }
 

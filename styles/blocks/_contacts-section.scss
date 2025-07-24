@@ -1,12 +1,11 @@
 @use "../helpers"as *;
 
-/*---------HERO (START)--------*/
-
-.hero {
+/*---------CONTACTS SECTION (START)--------*/
+.contacts {
     position: relative;
     display: flex;
     overflow: hidden;
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
     min-height: 900px;
     box-sizing: border-box;
 
@@ -27,6 +26,7 @@
         @include mobile {
             grid-template-columns: 1fr;
             gap: var(--space-40);
+
         }
     }
 
@@ -49,18 +49,16 @@
         margin-bottom: var(--space-40);
     }
 
-    &__text-block {
+    &__list {
         display: grid;
-        gap: 30px;
+    }
 
-        p {
-            font-weight: 300;
+    &__item {
+        font-weight: 400;
+        font-size: 40px;
+
+        @include tablet {
             font-size: 20px;
-            margin-bottom: 0;
-
-            @include mobile {
-                font-size: 14px;
-            }
         }
     }
 
@@ -89,4 +87,4 @@
     }
 }
 
-/*---------HERO (END)--------*/
+/*---------CONTACTS SECTION (END)--------*/

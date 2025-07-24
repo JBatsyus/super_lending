@@ -1,10 +1,10 @@
 @use "../helpers"as *;
 
 /*---------INFO (START)--------*/
+
 .info-card {
     &__title {
         margin-bottom: var(--space-40);
-
     }
 
     &__content {
@@ -15,12 +15,29 @@
         @include mobile {
             max-width: 100%;
         }
+
+        // Основной список
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-block: 0;
+
+            // Пункты основного списка
+            >li {
+                &:not(:last-child) {
+                    margin-bottom: var(--space-40);
+
+                    @include mobile {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
     }
 
     &__background {
         background-repeat: no-repeat;
         background-position: right bottom;
-        // background-size: 150px;
         margin-bottom: 120px;
 
         @include mobile {
@@ -28,6 +45,10 @@
             margin-bottom: 60px;
         }
     }
+}
+
+.info-section .info-card__background {
+    margin-bottom: 0;
 }
 
 /*---------INFO (END)--------*/
