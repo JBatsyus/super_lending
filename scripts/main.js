@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lenis
     const lenis = new Lenis({
+        syncTouch: true, // Важно для мобильных устройств
+        syncWindow: false, // Отключаем синхронизацию с нативным скроллом
         lerp: 0.1, // Коэффициент интерполяции (0-1, меньше = плавнее)
         duration: 1.2, // Длительность анимации скролла (в секундах)
         orientation: 'vertical', // Направление
