@@ -96,28 +96,25 @@
         padding-top: 60px;
     }
 
-    &__scroll-container {
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        padding: 10px 0;
-        -webkit-overflow-scrolling-behavior: smooth;
-        scroll-behavior: smooth;
-
-    }
-
     &__grid {
+
         display: grid;
         justify-self: center;
         grid-template-columns: repeat(4, 1fr);
         gap: var(--space-40);
         padding-bottom: 10px;
-        width: max-content;
+        width: 100%;
 
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-x: repeat(100%);
     }
 
     &__image {
         aspect-ratio: 137 / 208;
+        height: 624px;
 
         @include mobile {
             aspect-ratio: 1 / 1;

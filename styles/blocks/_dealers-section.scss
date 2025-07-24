@@ -5,9 +5,10 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-40);;
+        gap: var(--space-40);
+        ;
 
-        @include mobile {
+        @include tablet {
             grid-template-columns: 1fr;
         }
     }
@@ -15,7 +16,8 @@
     &__left {
         display: grid;
         align-content: center;
-        gap: var(--space-40);;
+        gap: var(--space-40);
+        ;
     }
 
     &__text {
@@ -35,7 +37,9 @@
 
     &__right {
         align-content: center;
+        overflow: hidden;
         aspect-ratio: 283 / 200;
+
 
         @include mobile {
             aspect-ratio: 1;
