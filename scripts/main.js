@@ -1,16 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+        duration: 1.2,
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
 
-    // Use requestAnimationFrame to continuously update the scroll
+    // Оптимизированный RAF цикл
+    let isAnimating = true;
+
     function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
+        if (isAnimating) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
     }
-
     requestAnimationFrame(raf);
-
-
 
     // Функция для удаления якоря из URL
     function removeAnchorFromUrl() {
@@ -28,66 +36,52 @@ document.addEventListener('DOMContentLoaded', () => {
         removeAnchorFromUrl();
     });
 
-    // кнопка наверх
+
+
+    // Кнопка "наверх" с интеграцией Lenis
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    if (scrollToTopBtn) {
+        const updateButtonVisibility = () => {
+            const shouldShow = lenis.scroll > 300 || window.scrollY > 300;
+            scrollToTopBtn.classList.toggle('visible', shouldShow);
+        };
 
-    if (!scrollToTopBtn) return;
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    });
+        lenis.on('scroll', updateButtonVisibility);
+        updateButtonVisibility();
 
-    scrollToTopBtn.addEventListener('click', function () {
-        if (typeof lenis !== 'undefined' && lenis.scrollTo) {
+        scrollToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             lenis.scrollTo(0);
-        } else {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        });
+    }
+    // Мобильное меню
+
+    const menuHumb = document.querySelector('.menu-humb');
+    const menuMob = document.querySelector('.menu-mob');
+
+
+    menuHumb.addEventListener('click', function (e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        menuMob.classList.toggle('active');
+        document.documentElement.classList.toggle('no-scroll');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.menu-mob') && !e.target.closest('.menu-humb')) {
+            menuHumb.classList.remove('active');
+            menuMob.classList.remove('active');
+            document.documentElement.classList.remove('no-scroll');
         }
     });
 
-    if (window.scrollY > 300) {
-        scrollToTopBtn.classList.add('visible');
+    var links = document.querySelectorAll('.menu-mob a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function () {
+            menuHumb.classList.remove('active');
+            menuMob.classList.remove('active');
+            document.documentElement.classList.remove('no-scroll');
+        });
     }
 
-});
-
-
-
-const menuHumb = document.querySelector('.menu-humb');
-const menuMob = document.querySelector('.menu-mob');
-const header = document.querySelector('.header');
-
-
-// Обработчик клика на бургер
-menuHumb.addEventListener('click', function (e) {
-    e.stopPropagation();
-    this.classList.toggle('active');
-    menuMob.classList.toggle('active');
-    document.documentElement.classList.toggle('no-scroll');
-});
-
-// Закрытие меню при клике вне его
-document.addEventListener('click', function (e) {
-    if (!e.target.closest('.menu-mob') && !e.target.closest('.menu-humb')) {
-        menuHumb.classList.remove('active');
-        menuMob.classList.remove('active');
-        document.documentElement.classList.remove('no-scroll');
-
-    }
-});
-
-// Закрытие при клике на ссылки
-document.querySelectorAll('.menu-mob a').forEach(link => {
-    link.addEventListener('click', () => {
-        menuHumb.classList.remove('active');
-        menuMob.classList.remove('active');
-        document.documentElement.classList.remove('no-scroll');
-
-    });
 });

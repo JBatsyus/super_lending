@@ -1,5 +1,8 @@
 @use 'helpers'as *;
 
+html {
+  scroll-behavior: initial;
+}
 
 body {
     font-size: 24px;
