@@ -437,7 +437,7 @@ a[class] {
 }
 
 .logo {
-  max-width: 66px;
+  width: 66px;
 }
 @media (width <= 63.99875rem) {
   .logo {
@@ -1115,5 +1115,65 @@ a[class] {
 }
 
 /*---------CONTACTS SECTION (END)--------*/
+/*---------FOOTER (START)--------*/
+.footer {
+  padding-block: 24px;
+}
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (width <= 47.99875rem) {
+  .footer__container {
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-40);
+  }
+}
+.footer__logo {
+  width: 120px;
+}
+.footer__nav-list {
+  display: flex;
+  column-gap: 16px;
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+}
+@media (width <= 47.99875rem) {
+  .footer__nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.footer__nav-link {
+  font-weight: 500;
+  font-size: 24px;
+}
+.footer__links-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (width <= 63.99875rem) {
+  .footer__links-col {
+    flex-direction: row;
+    gap: var(--space-40);
+    margin: 0 auto;
+  }
+}
+@media (width <= 47.99875rem) {
+  .footer__links-col {
+    flex-direction: column;
+    margin-right: auto;
+    font-size: 14px;
+  }
+}
+
+/*---------FOOTER (END)--------*/
 
 /*# sourceMappingURL=main.css.map */
