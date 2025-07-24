@@ -18,9 +18,17 @@
     }
 }
 
-body.no-scroll {
+html.no-scroll {
+    position: fixed;
+    inset: 0;
     overflow: hidden;
+    // overflow: hidden;
+    // height: 100vh;
+    // touch-action: none;
+    // -webkit-overflow-scrolling: auto;
 }
+
+
 
 // скрыть элемент на ширине 768 и более
 .visible-mobile {
@@ -37,12 +45,14 @@ body.no-scroll {
         display: block !important;
     }
 }
+
 // скрыть элемент на ноуте
 .visible-laptop-s {
     @include laptop-s {
         display: none !important;
     }
 }
+
 .visible-tablet {
     @include tablet {
         display: none !important;

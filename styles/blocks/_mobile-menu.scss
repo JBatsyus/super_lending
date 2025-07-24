@@ -16,6 +16,23 @@
         position: relative;
         transition: background 0.2s ease-in-out;
     }
+
+    &.active {
+        .icon-humb__line {
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
 }
 
 .menu-mob {
@@ -38,10 +55,13 @@
 
 .icon-humb__line {
     width: 100%;
-    height: 1px;
+    height: 2px;
     background: var(--color-white);
     border-radius: 2px;
-    // transition: transform 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transform-origin: center;
+
+
 }
 
 .menu-mob {
